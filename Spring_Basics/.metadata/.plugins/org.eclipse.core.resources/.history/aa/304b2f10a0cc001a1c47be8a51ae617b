@@ -1,0 +1,10 @@
+package com.spring.ioc;
+
+public class Mobile {
+	public static void main(String[] aths)
+	{
+		ApplicationContext context=new ClassPathApplicationContext("benas.xml");
+		
+	}
+
+}

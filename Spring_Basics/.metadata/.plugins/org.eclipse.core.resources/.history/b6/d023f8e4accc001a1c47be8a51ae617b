@@ -1,0 +1,8 @@
+package com.spring.di;
+
+public class Student {
+	
+	String studentName;
+	
+
+}

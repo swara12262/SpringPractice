@@ -1,0 +1,26 @@
+package com.spring.autowire;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+public class Human {
+
+	
+	private Heart heart;
+	
+	@Autowired
+	public Human(Heart heart) {
+		super();
+		this.heart = heart;
+	}
+	public void setHeart(Heart heart) {
+		this.heart = heart;
+		System.out.println("Setter method called");
+	}
+	public void startPumping()
+	{
+		if(heart==null)
+			System.out.println("You are dead");
+		else
+			heart.pump();
+	}
+}

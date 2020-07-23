@@ -1,0 +1,9 @@
+package com.spring.di;
+
+public class ScienceCheat {
+	public void scienceCheat()
+	{
+		System.out.println("Science cheating started");
+	}
+
+}

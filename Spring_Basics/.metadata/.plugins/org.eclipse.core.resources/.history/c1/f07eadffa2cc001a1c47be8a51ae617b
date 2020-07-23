@@ -1,0 +1,19 @@
+package com.spring.ioc;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class Mobile {
+	public static void main(String[] aths)
+	{
+		ApplicationContext context=new ClassPathXmlApplicationContext("beans.xml");
+		Airtel a=(Airtel) context.getBean("airtel");
+		a.calling();
+		a.data();
+		Vodaphone v=(Vodaphone ) context.getBean("vodaphone");
+		v.calling();
+		v.data();
+		
+	}
+
+}

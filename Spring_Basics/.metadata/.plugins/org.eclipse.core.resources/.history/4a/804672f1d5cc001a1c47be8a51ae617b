@@ -1,0 +1,19 @@
+package com.spring.autowire;
+
+public class Human {
+
+	private Heart heart;
+
+	@Autowired
+	public void setHeart(Heart heart) {
+		this.heart = heart;
+		System.out.println("Setter method called");
+	}
+	public void startPumping()
+	{
+		if(heart==null)
+			System.out.println("You are dead");
+		else
+			heart.pump();
+	}
+}

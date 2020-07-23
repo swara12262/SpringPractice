@@ -1,0 +1,12 @@
+package com.spring.autowire;
+
+public class Heart {
+
+	private String nameOfAnimal;
+	private int noOfHeart;
+	public void pump()
+	{
+		System.out.println("Your heart is pumping");
+		System.out.println("Alive");
+	}
+}

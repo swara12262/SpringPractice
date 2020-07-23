@@ -1,0 +1,15 @@
+package com.spring.di;
+
+public class MathCheat implements Cheat{
+	
+	public void mathCheat()
+	{
+		System.out.println("Math cheating started");
+	}
+
+	@Override
+	public void cheat() {
+		mathCheat();
+		
+	}
+}

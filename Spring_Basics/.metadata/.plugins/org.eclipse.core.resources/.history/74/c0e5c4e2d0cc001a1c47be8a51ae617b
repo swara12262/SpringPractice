@@ -1,0 +1,12 @@
+package com.spring.di;
+
+public class Student {
+	
+	private Cheat cheat;
+
+	public void cheating()
+	{
+		cheat.cheat();
+	}
+	
+}
