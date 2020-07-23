@@ -5,7 +5,8 @@ import org.springframework.beans.factory.annotation.Qualifier;
 
 public class Human {
 
-	
+	@Autowired
+	@Qualifier("humanHeart")
 	private Heart heart;
 	
 	public Human() {
@@ -16,8 +17,7 @@ public class Human {
 		this.heart = heart;
 	}
 	
-	@Autowired
-	@Qualifier("humanHeart")
+	
 	public void setHeart(Heart heart) {
 		this.heart = heart;
 		System.out.println("Setter method called");
