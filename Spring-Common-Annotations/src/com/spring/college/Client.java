@@ -8,7 +8,8 @@ public class Client {
 
 	public static void main(String[] args) {
 		ApplicationContext context=new AnnotationConfigApplicationContext(CollegeConfig.class);
-		College college=context.getBean("collegeBean", College.class);
+		College college=context.getBean("colBean", College.class);
+		college.test();
 		System.out.println("Object created");
 	}
 

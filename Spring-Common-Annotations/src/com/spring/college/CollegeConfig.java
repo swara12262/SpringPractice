@@ -1,10 +1,15 @@
 package com.spring.college;
 
-import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ComponentScan(basePackages ="com.spring.college" )
 public class CollegeConfig {
 
+	@Bean(name = "colBean")//method name is going to be id of bean
+	public College collegeBean()
+	{
+		College college=new College();
+		return college;
+	}
 }
