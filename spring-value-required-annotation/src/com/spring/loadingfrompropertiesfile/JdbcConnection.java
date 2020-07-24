@@ -11,7 +11,7 @@ public class JdbcConnection {
 
 	@Value("${jdbc.url}")
 	private String url;
-	
+
 	@Value("${jdbc.username}")
 	private String username;
 	
