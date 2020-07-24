@@ -15,6 +15,7 @@ public class JdbcConnection {
 	@Value("${jdbc.username}")
 	private String username;
 	
+	
 	@Value("${jdbc.password}")
 	private String password;
 	
