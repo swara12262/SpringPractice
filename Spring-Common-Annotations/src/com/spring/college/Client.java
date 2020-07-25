@@ -11,6 +11,8 @@ public class Client {
 		College college=context.getBean("colBean", College.class);
 		college.test();
 		System.out.println("Object created");
+	
+			
 	}
 
 }

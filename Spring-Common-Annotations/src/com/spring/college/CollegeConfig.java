@@ -11,10 +11,18 @@ public class CollegeConfig {
 	{
 		return new Principal();
 	}
+	
+	@Bean
+	public Teacher teacherBean()
+	{
+		return new MathTeacher();
+	}
 	@Bean(name = "colBean")//method name is going to be id of bean
 	public College collegeBean()
 	{
-		College college=new College(principalBean());
+		College college=new College();
+		college.setPrincipal(principalBean());
+		college.setTeacher(teacherBean());
 		return college;
 	}
 }
