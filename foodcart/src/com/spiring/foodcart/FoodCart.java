@@ -1,6 +1,8 @@
 package com.spiring.foodcart;
 
 import java.io.IOException;
+import java.sql.SQLException;
+import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -18,8 +20,17 @@ public class FoodCart extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
-		String[] foodItems= {"Biryani", "Chicken lolypop", "Pizza"};
-		request.setAttribute("foodItems", foodItems);
+		
+		ArrayList<Food> foodItems =new ArrayList<>();
+		try {
+			foodItems = (ArrayList<Food>) FoodcartDbUtil.getFoodList();
+			request.setAttribute("foodItems", foodItems);
+			
+		} catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
+		
 		
 		RequestDispatcher dispatcher = request.getRequestDispatcher("show-food.jsp");
 		dispatcher.forward(request, response);

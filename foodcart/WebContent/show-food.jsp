@@ -9,8 +9,12 @@
 </head>
 <body>
 <p>Food items coming soon..</p>
-	<c:forEach var="items" items="${foodItems }">
-	${items }
+	<c:forEach var="items" items="${foodItems}">
+	
+	${items.id}
+	${items.item}
+	${items.price}
+	
 	</c:forEach>
 </body>
 </html>
