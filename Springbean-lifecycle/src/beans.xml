@@ -5,11 +5,11 @@
     xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context
-        https://www.springframework.org/schema/context/spring-context.xsd">
+        https://www.springframework.org/schema/context/spring-context.xsd" default-init-method="init" default-destroy-method="closeConnection">
         
      <context:annotation-config />
         
-	<bean id="studentDao" class="com.spring.beanlifecycle.StudentDAO">
+	<bean id="studentDao" class="com.spring.beanlifecycle.StudentDAO" >
 	<property name="driver"  value="com.mysql.jdbc.Driver"/>
 	<property name="url"  value="jdbc:mysql://localhost:3306/photo_app"/>
 	<property name="username"  value="swara"/>

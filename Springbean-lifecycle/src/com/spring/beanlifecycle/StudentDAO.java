@@ -53,7 +53,7 @@ public class StudentDAO {
 		this.driver = driver;
 	}
 	
-	@PostConstruct
+	//@PostConstruct
 	public void init() throws Exception
 	{
 		System.out.println("Inside custom init method");
@@ -94,7 +94,7 @@ public class StudentDAO {
 		System.out.println("Record deleted with id=" + userID);
 	}
 	
-	@PreDestroy
+	//@PreDestroy
 	public void closeConnection() throws SQLException
 	{
 		System.out.println("cleaning up");
