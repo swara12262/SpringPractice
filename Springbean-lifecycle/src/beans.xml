@@ -5,7 +5,7 @@
     xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context
-        https://www.springframework.org/schema/context/spring-context.xsd" default-init-method="init" default-destroy-method="closeConnection">
+        https://www.springframework.org/schema/context/spring-context.xsd">
         
      <context:annotation-config />
         
@@ -15,4 +15,6 @@
 	<property name="username"  value="swara"/>
 	<property name="password"  value="swara"/>
 	</bean>
+	
+	<bean id="hello" class="com.spring.beanlifecycle.Hello" />
 </beans>

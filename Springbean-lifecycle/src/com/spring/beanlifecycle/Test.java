@@ -9,10 +9,11 @@ public class Test {
 	public static void main(String[] args) throws Exception
 	{
 		ApplicationContext context=new ClassPathXmlApplicationContext("beans.xml");
-		StudentDAO st=context.getBean("studentDao", StudentDAO.class);
+		/*StudentDAO st=context.getBean("studentDao", StudentDAO.class);
 		
 		st.selectAllRows();
-		st.deleteUserRecord(15);
+		st.deleteUserRecord(15);*/
+		
 		((AbstractApplicationContext) context).close();
 		
 	}
