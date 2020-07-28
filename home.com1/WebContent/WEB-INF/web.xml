@@ -20,6 +20,6 @@
 
 	<servlet-mapping>
 		<servlet-name>dad-frontcontroller</servlet-name>
-		<url-pattern>/home.com/*</url-pattern>
+		<url-pattern>/home.com1/*</url-pattern>
 	</servlet-mapping>
 </web-app>
